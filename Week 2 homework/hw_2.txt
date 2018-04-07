@@ -1,0 +1,59 @@
+#Replace all four and five letter workds in a string with equivalent
+#Number of asterists
+
+i_string = input("Enter a string that you want to censor: \n")
+
+listWords = i_string.split()
+
+newString = ""
+
+for word in listWords:
+    if len(word) == 4 or len(word) == 5: 
+        newString += ("*" * len(word) + " ")
+    else:
+        newString += (word + " ")
+
+print(newString)
+# Program to shift a string to the right by a specified amount
+# Christopher Calmes
+# 02/21/2018
+
+def main():
+    
+    ip=input("Enter a word: ")
+    shift = eval(input("Enter the amount of shift: "))
+
+    shift %= len(ip)
+
+
+    p1 = ip[len(ip) - shift:] #first part of string
+    p2 = ip[:len(ip) - shift] #second part of string
+
+
+    ip = p1 + p2
+    print (ip)
+
+
+if __name__ == "__main__":
+    main()
+#Program to convert date from format mm/dd/yyyy to 
+#Month Day, Year
+#Christopher Calmes
+#02/22/2018
+
+def main():
+    dateStr = input("Enter a date in the format (mm/dd/yyyy): ")
+    monthStr, dayStr, yearStr = dateStr.split("/")
+
+    months = ["January", "February", "March", "April", 
+            "May", "June", "July", "August", "September", 
+            "October", "November", "December"]
+
+    monthStr = months[int(monthStr) - 1] #-1 because of indexing
+
+    print ("Date in new format: ", monthStr, dayStr+",", yearStr)
+
+main()
+
+if __name__=="__main__":
+        main()

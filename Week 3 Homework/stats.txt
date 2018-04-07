@@ -1,0 +1,4 @@
+Number of Words: 11
+Number of chars: 45
+Average word Length: 4.090909090909091
+Number of sentences: 1
